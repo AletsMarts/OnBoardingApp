@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.foundation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,11 +68,13 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     //--OnBoarding
-    implementation("com.google.accompanist-pager:0.15.0")
+    //implementation("com.google.accompanist-pager:0.15.0")
+    implementation(libs.androidx.foundation.pager) // Versión más reciente al 16 de octubre de 2024
     //--Lottie
-    implementation("com.airbnb.android:lottie-compose:5.2.0")
+    //implementation("com.airbnb.android:lottie-compose:5.2.0")
+    implementation("com.airbnb.android:lottie-compose:6.1.0") // Versión más reciente al 16 de octubre de 2024
     //--Navigation
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.8.4")
     //--DataStore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
 }
