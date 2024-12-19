@@ -1,14 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.example.onboardingapp"
-    compileSdk = 34
+    namespace = "com.example.boardingapp"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.onboardingapp"
+        applicationId = "com.example.boardingapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -59,6 +59,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("com.google.accompanist:accompanist-pager:0.15.0")
+    implementation("com.airbnb.android:lottie-compose:5.2.0")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,12 +70,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    //--OnBoarding
-    implementation("com.google.accompanist-pager:0.15.0")
-    //--Lottie
-    implementation("com.airbnb.android:lottie-compose:5.2.0")
-    //--Navigation
-    implementation("androidx.navigation:navigation-compose:2.5.3")
-    //--DataStore
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }
